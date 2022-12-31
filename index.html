@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sheet.css" type="text/css">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: rgb( 230, 230,230);
+        }
+        .container-1{
+            background-color: #FFFFFF;
+            border: 2px solid #FFFFFF;
+            border-radius: 50px;
+            height: 500px;
+            margin-top: 50px;
+            margin-left: 250px;
+            box-shadow: 10px 10px 10px 10px #FFFFFF;
+            width: 700px;
+            padding: 50px;
+            font-size: xx-large;
+        }
+        input{
+            font-size: 30px;
+            width: 200px;
+            border-radius: 50px;
+            border: 3px solid black;
+            margin: 20px;
+        }
+        button{
+            font-size: xx-large;
+            padding: 20px;
+            margin: 15px;
+            width: 100px;
+            height: 100px;
+            background-color: #FFFFFF   ;
+            box-shadow: 3px 3px 10px;
+            border: 2px solid #FFFFFF;
+        }
+        span{
+            font-size: 50px;
+        }
+        .container{
+            border: 2px solid transparent;
+            background-color: transparent;
+            padding: 10px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-1">
+        Enter The First Value: 
+        <input type="number" name="number" id="first_value" class="container-2">
+        <br>
+        Enter The Second Value: 
+        <input type="number" name="number" id="second_value" class="container-3">
+        <br>
+        <button class="container-4" onclick="add()"><span>+</span></button>
+        <button class="container-5" onclick="sub()"><span>-</span></button>
+        <button class="container-6" onclick="mul()"><span>X</span></button>
+        <button class="container-7" onclick="divi()"><span>/</span></button>
+        <p class="container-8">
+            Result: 
+            <!-- <button class="container-9"><h1 id="result" class="container-10"></h1></button> -->
+            <i id="res" class="container">
+        </p>
+        <i dir="three"></i>
+    </div>
+</body>
+<script>
+    function add(){
+        var x = parseInt(document.getElementById("first_value").value);
+        var y = parseInt(document.getElementById("second_value").value);
+        var sum = x + y;
+        // document.write(sum);
+        document.getElementById("res").innerHTML = sum ;
+    }
+    function sub(){
+        var x = parseInt(document.getElementById("first_value").value);
+        var y = parseInt(document.getElementById("second_value").value);
+        var sum = x - y;
+        // document.write(sum);
+        document.getElementById("res").innerHTML = sum ;
+    }
+    function mul(){
+        var x = parseInt(document.getElementById("first_value").value);
+        var y = parseInt(document.getElementById("second_value").value);
+        var sum = x * y;
+        // document.write(sum);
+        document.getElementById("res").innerHTML = sum ;
+    }
+    function divi(){
+        var x = parseInt(document.getElementById("first_value").value);
+        var y = parseInt(document.getElementById("second_value").value);
+        var sum = x / y;
+        // document.write();
+        document.getElementById("res").innerHTML = sum ;
+    }
+    function con(){
+        var x = pareInt(document.getElementById("third_value").value);
+        var y = x/100;
+        document.getElementById("three").innerHTML  = y;
+    }
+</script>
+</html>
